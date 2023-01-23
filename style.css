@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background: #4361ee;
+}
+.list_container {
+	background: #fff;
+	max-height: 400px;
+	max-width: 350px;
+	height: 350px;
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0 0 25px 2px #0002;
+	border-radius: 15px;
+	flex-direction: column;
+}
+.list_container h2 {
+	font-size: 25px;
+	padding-top: 15px;
+	text-transform: capitalize;
+	line-height: 1;
+	text-align: center;
+	font-weight: 600;
+}
+.list_head {
+	width: 100%;
+	padding: 10px;
+	border-bottom: 1px solid #0001;
+	display: flex;
+	justify-content: center;
+	padding: 15px 20px;
+}
+.textInput {
+	padding: 6px 10px;
+	width: 100%;
+	border-radius: 5px;
+	text-transform: capitalize;
+	outline: none;
+	color: #0009;
+	border: 1px solid #0002;
+}
+.textInput::placeholder {
+	color: #0005;
+}
+.addBtn {
+	padding: 0 15px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-left: 5px;
+	background: #415de3;
+	color: #fff;
+	fonts: 15px;
+	font-size: 14px;
+	font-weight: 500;
+	opacity: 0.5;
+	pointer-events: none;
+}
+.addBtn.disabled {
+	opacity: 1;
+	pointer-events: auto;
+}
+.list_body {
+	flex: 1;
+	padding: 15px 20px;
+	display: flex;
+	grid-gap: 5px;
+	flex-direction: column;
+	overflow: auto;
+}
+/* width */
+.list_body::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+.list_body::-webkit-scrollbar-track {
+	background: #ced6ff;
+}
+
+/* Handle */
+.list_body::-webkit-scrollbar-thumb {
+	background: #4361ee;
+}
+
+.list_body_item {
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	align-items: center;
+	background: #f9f9f9;
+	cursor: pointer;
+	flex: 0 0 40px;
+}
+.list_body_item p {
+	text-transform: capitalize;
+	font-size: 14px;
+	padding-left: 15px;
+	color: #a5a5a5;
+}
+.dlt {
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	margin-right: -50px;
+	justify-content: center;
+	background: #ff6a6a;
+	transition: 0.3s ease;
+}
+.list_body_item:hover .dlt {
+	margin-right: 0;
+}
+.dlt i {
+	font-size: 20px;
+	color: #fff;
+}
